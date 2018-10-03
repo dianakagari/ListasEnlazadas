@@ -21,11 +21,7 @@ public class LinkedList {
     
         System.out.println("que opcion desea elegir?");
         opcion=teclado.nextInt();
-        
-         String dato = teclado.nextLine();
-         opcion = Integer.parseInt(dato);
-         
-         
+
        
          
         while(opcion !=7)
@@ -51,7 +47,16 @@ public class LinkedList {
                 break;
                 
             default:
-        }
+        }  System.out.println("1.- Insertar al inicio :D");
+        System.out.println("2.- Insertar al final owo");
+        System.out.println("3.- Borrar al inicio o3o");
+        System.out.println("4.- Borrar al final >w<");
+        System.out.println("5.- Mostrar datos! :3");
+        System.out.println("6.- Buscar un elemento o..o");
+        System.out.println("7.- Salir, Exit, Shindeiru <3");
+    
+        System.out.println("que opcion desea elegir?");
+        opcion=teclado.nextInt();
     
     }
     
