@@ -8,7 +8,7 @@ public class LinkedList {
     public static void main(String[] args) { 
    
         Scanner teclado = new Scanner(System.in);
-        char opcion;
+        int opcion;
        
    
         System.out.println("1.- Insertar al inicio :D");
@@ -20,9 +20,15 @@ public class LinkedList {
         System.out.println("7.- Salir, Exit, Shindeiru <3");
     
         System.out.println("que opcion desea elegir?");
-        opcion= teclado.next().charAt(0);
+        opcion=teclado.nextInt();
+        
+         String dato = teclado.nextLine();
+         opcion = Integer.parseInt(dato);
          
-        while(opcion !='7')
+         
+       
+         
+        while(opcion !=7)
     {
             
         switch(opcion)
