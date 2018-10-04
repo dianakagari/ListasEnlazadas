@@ -17,9 +17,71 @@ public class MyLinkedList {
         }
         print();
     }
-   boolean isEmpty() {//metodo para saber si la lista esta vacia
+   
+    void insertAtEnd(int valor) {
+        Node node = new Node(valor);
+        if(isEmpty()) {
+            this.head = node;
+        } else {
+            Node last = this.head;
+            while (last.siguiente != null) {
+                last = last.siguiente;
+            }
+            last.siguiente = node;
+        }
+        print();
+    }
+    
+    void eraseAtBeginning() {
+        if(isEmpty()) { 
+            System.out.println("La lista está vacía"); 
+        } else {
+            // Guardamos una referencia al segundo elemento de la lista
+            Node siguiente = head.siguiente;
+            // Borramos el primerElemento.siguiente
+            head.siguiente = null;
+            // Ponemos el head en el segundo elemento
+            head = siguiente;
+        }
+        print();
+    }
+    
+    void eraseAtEnd() {
+        if(isEmpty()) { 
+            System.out.println("La lista está vacía"); 
+        } else {
+            Node ultimo = head;
+            Node penultimo = null;
+            while(ultimo.siguiente != null) {
+                penultimo = ultimo;
+                ultimo = ultimo.siguiente;
+            }
+            if(penultimo != null) {
+                penultimo.siguiente = null;
+            } else {
+                head = null;
+            }
+        }
+        print();
+    }
+    
+    int search(int value) {
+        int position = 0;
+        Node node = head;
+        while (node != null) {
+            if (node.valor == value) {
+                return position;
+            }
+            position += 1;
+            node = node.siguiente;
+        }
+        return -1;
+    }
+    
+    boolean isEmpty() {//metodo para saber si la lista esta vacia
         return head == null;
     }
+   
    void print() {//metodo para saber si la lista esta vacia
     if (isEmpty()) {
         System.out.println("La lista está vacía"); 

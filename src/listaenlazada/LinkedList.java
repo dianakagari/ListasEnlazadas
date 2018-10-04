@@ -34,20 +34,33 @@ public class LinkedList {
             
             case 1:
                 int dato;
-                System.out.print("Digite el numero");
-                dato=teclado.nextInt();
+                System.out.print("Digite el numero: ");
+                dato = teclado.nextInt();
                 lista.insertAtBeginning(dato);
                 break;
             case 2:
+                System.out.print("Digite el numero: ");
+                dato = teclado.nextInt();
+                lista.insertAtEnd(dato);
                 break;
             case 3:
+                lista.eraseAtBeginning();
                 break;
             case 4:
+                lista.eraseAtEnd();
                 break;
             case 5:
                 lista.print();  
                 break;
             case 6:
+                System.out.print("Digite el numero: ");
+                dato = teclado.nextInt();
+                int position = lista.search(dato);
+                if(position == -1) {
+                    System.out.println("No se encontró el dato :(");
+                } else {
+                    System.out.println("El numero se encuentra en la posición: "+position);
+                }            
                 break;
             case 7: 
                 break;
